@@ -10,7 +10,7 @@ const PageHeader = (props) => {
     return (ReactDOM.createPortal(
         <div className="page-header">
             <Link to="/" className="inicio">
-                SEJA-1-POLICIAL
+                SEJA1POLICIAL
             </Link>
             <ul>
                 <li><Link to="/cursos-completos" className="cursos-completos">
@@ -28,7 +28,7 @@ const PageHeader = (props) => {
             </ul>
         </div>,
         document.getElementById('header-hook'))
-        )
+    )
 }
 
 
