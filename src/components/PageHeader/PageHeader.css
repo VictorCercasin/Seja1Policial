@@ -51,3 +51,8 @@
     letter-spacing: 2px;
     font-weight: 500px;
 }
+
+.page-header img {
+    height: 5rem;
+    width: 5rem;
+}

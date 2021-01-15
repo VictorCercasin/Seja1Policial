@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import Logo from "../../assets/images/logo.bmp";
 
 import './PageHeader.css';
 
@@ -9,6 +10,7 @@ import './PageHeader.css';
 const PageHeader = (props) => {
     return (ReactDOM.createPortal(
         <div className="page-header">
+            <img src={Logo} alt="logo" />
             <Link to="/" className="inicio">
                 SEJA1POLICIAL
             </Link>
