@@ -1,0 +1,11 @@
+#user-icon{
+    background-color: var(--color-secundary-dark);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#user-button{
+    margin-right: 8vw;
+
+}

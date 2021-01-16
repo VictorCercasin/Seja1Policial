@@ -4,6 +4,7 @@
     border-radius: 0.8rem;
     margin-top: 2.4rem;
     overflow: hidden;
+    width: 100%;
 
 }
 
@@ -78,27 +79,3 @@
     background: var(--color-secundary-dark);
 }
 
-@media (min-width: 700px){
-    .teacher-item header, .teacher-item footer{
-        padding: 3.2rem;
-    }
-
-    .teacher-item .teacher-item > p{
-        padding: 3.2rem 3.2rem;
-    }
-
-    .teacher-item footer p strong {
-        display: initial;
-        margin-left: 1.6rem;
-    }
-
-    .teacher-item footer button {
-        width: 24.5rem;
-        font-size: 1.6rem;
-        justify-content: center;
-    }
-
-    .teacher-item footer button img{
-        margin-right: 1.6rem;
-    }
-}

@@ -5,11 +5,8 @@ import "./Inicial.css"
 
 const  Inicial = () => {
     return (
-        <div id="page-inicial">
+        <div id="page-inicial" className='page'>
             <div id="page-inicial-content">
-
-                <PageHeader search=""></PageHeader>
-
                 <div className="nome-container">
                     <h1>SEJA UM POLICIAL</h1>
                     <h2><i>Plataforma de estudos online focado na área policial.</i></h2>

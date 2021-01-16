@@ -1,58 +1,64 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
-.page-header{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 80px;
-    background: #FBCC15;
+.page-header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  height: 100px;
+  background: #fbcc15;
 }
 
-.page-header .inicio{
-    position: relative;
-    font-weight: 700;
-    color: black;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
+.page-header .inicio {
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+  position: relative;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding-left: 30px;
 }
 
-.page-header ul{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.page-header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
 }
 
-.page-header ul li{
-    position: relative;
-    list-style: none;
+.page-header ul li {
+  position: relative;
+  list-style: none;
 }
 
 .page-header ul li .cursos-completos,
 .page-header ul li .questoes,
 .page-header ul li .mais-info,
-.page-header ul li .assinaturas
-{
-    position: relative;
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    letter-spacing: 2px;
-    font-weight: 500px;
+.page-header ul li .assinaturas {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 500px;
 }
 
 .page-header img {
-    height: 5rem;
-    width: 5rem;
+  height: 10rem;
+  width: 10rem;
 }

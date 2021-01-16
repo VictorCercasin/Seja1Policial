@@ -3,8 +3,7 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 
 function Questoes() {
     return (
-        <div id="page-questoes" className="container">
-            <PageHeader search="Buscar por questão" />
+        <div id="page-questoes" className="container page">
 
         </div>
     )

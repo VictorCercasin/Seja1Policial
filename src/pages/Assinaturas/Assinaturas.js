@@ -3,8 +3,8 @@ import PageHeader from '../../components/PageHeader/PageHeader';
 
 const Assinaturas = () => {
     return (
-        <div id="page-assinatura" className="container">
-            <PageHeader search="" />
+        <div id="page-assinatura" className="container page">
+
         </div>
     )
 }

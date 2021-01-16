@@ -6,7 +6,7 @@ import './CursoItem.css';
 
 const TeacherItem = (props) => {
     return (
-        <main>
+        <div>
             <article className="teacher-item">
                 <header>
                     <img src={props.imgSrc} alt={props.imgAlt} />
@@ -34,7 +34,7 @@ const TeacherItem = (props) => {
                 </footer>
 
             </article>
-        </main>
+        </div>
     );
 }
 

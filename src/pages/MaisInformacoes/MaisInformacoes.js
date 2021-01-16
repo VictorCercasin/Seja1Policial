@@ -11,8 +11,7 @@ import "./MaisInformacoes.css";
 
 const MaisInformacoes = () => {
     return (
-        <body>
-            <PageHeader search=""></PageHeader>
+        <div className='page'>
             <div className="quem-somos">
                 <h1>
                     Quem somos?
@@ -39,8 +38,9 @@ const MaisInformacoes = () => {
                     <a><section className="contato-imagem"><img src={imagem6} alt="seja1gm" /></section></a>
                 </div>
             </div >
-        </body >
+        </div>
     )
+    
 
 }
 

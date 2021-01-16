@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-
-
-import UserIcon from "./../PageHeader/UserIcon/UserIcon";
 import Logo from "../../assets/images/logo.png";
+
 import "./PageHeader.css";
 
 const PageHeader = (props) => {
@@ -36,7 +34,6 @@ const PageHeader = (props) => {
           </Link>
         </li>
       </ul>
-    <UserIcon/>
     </div>,
     document.getElementById("header-hook")
   );
