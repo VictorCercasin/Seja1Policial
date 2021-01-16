@@ -1,17 +1,29 @@
-#drawer-links{
+.drawer-links ul{
     list-style: none;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-around;
 
 }
 
-#drawer-links ul li{
+.drawer-links ul li{
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.drawer-links ul li #button{
     list-style: none;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-secundary);
+    margin-bottom: auto;
+}
 
 
+.drawer-links ul li #button:hover{
+    color: var(--color-secundary-dark);
 }

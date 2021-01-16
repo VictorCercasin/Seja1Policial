@@ -1,6 +1,5 @@
 :root {
     font-size: 60%;
-    --color-background: #414141;
     --color-primary-lighter: #9b9b9b;
     --color-primary-light: #9e9e9e;
     --color-primary: #1a1a1a;
@@ -35,7 +34,7 @@ html, body, #root {
 }
 
 body{
-    background: var(--color-background);
+    background: var(--color-primary);
 }
 
 #root {
@@ -53,7 +52,6 @@ textarea {
 }
 
 .container {
-    width: 90vw;
-    max-width: 700px;
+    max-width: 90vw;
 }
 

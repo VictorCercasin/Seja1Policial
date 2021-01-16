@@ -22,7 +22,7 @@ body .quem-somos{
 
 body .quem-somos h1{
     color: var(--color-title-in-primary);
-    font-size: 72pt;
+    font-size: 72pt; 
     font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-top: 50px;
