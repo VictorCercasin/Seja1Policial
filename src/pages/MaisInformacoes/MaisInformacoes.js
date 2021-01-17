@@ -1,6 +1,5 @@
 import React from 'react'
 
-import PageHeader from '../../components/PageHeader/PageHeader';
 import imagem1 from '../../assets/images/Seja1gm.png'
 import imagem2 from '../../assets/images/Seja1PMPR3.png'
 import imagem3 from '../../assets/images/LogoCodifica.png'
@@ -40,7 +39,7 @@ const MaisInformacoes = () => {
             </div >
         </div>
     )
-    
+
 
 }
 
