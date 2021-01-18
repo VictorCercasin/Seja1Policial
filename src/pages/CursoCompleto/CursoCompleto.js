@@ -38,8 +38,7 @@ const DUMMY_COURSES = [
 
 const CursoCompleto = () => {
   return (
-    <div id="page-curso" className="container page">
-
+    <div className="page-curso">
       <CursoLista cursoLista={DUMMY_COURSES}></CursoLista>
     </div>
   );
