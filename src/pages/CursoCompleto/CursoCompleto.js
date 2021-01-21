@@ -1,8 +1,7 @@
 import React from "react";
 //import { Link } from 'react-router-dom';
 
-import PageHeader from "../../components/PageHeader/PageHeader";
-import CursoItem from "../../components/CursoItem/CursoItem";
+import PageFooter from "../../components/PageFooter/PageFooter";
 import CursoLista from "../../components/CursoItem/CursoLista";
 import "./CursoCompleto.css";
 
@@ -40,6 +39,7 @@ const CursoCompleto = () => {
   return (
     <div className="page-curso">
       <CursoLista cursoLista={DUMMY_COURSES}></CursoLista>
+      <PageFooter></PageFooter>
     </div>
   );
 };

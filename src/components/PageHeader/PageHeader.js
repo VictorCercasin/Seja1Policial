@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
-
 import UserIcon from "./../PageHeader/UserIcon/UserIcon";
 import Logo from "../../assets/images/logo.png";
 import "./PageHeader.css";
@@ -42,4 +41,4 @@ const PageHeader = (props) => {
   );
 };
 
-export default PageHeader;
+export default PageHeader; 
