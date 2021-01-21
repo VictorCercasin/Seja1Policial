@@ -9,7 +9,6 @@ const  Inicial = () => {
                 <h1>SEJA UM POLICIAL</h1>
                 <h2><i>Plataforma de estudos online focado na área policial.</i></h2>
             </div>
-            <PageFooter></PageFooter>
         </div>
     ) 
 }

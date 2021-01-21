@@ -39,7 +39,6 @@ const CursoCompleto = () => {
   return (
     <div className="page-curso">
       <CursoLista cursoLista={DUMMY_COURSES}></CursoLista>
-      <PageFooter></PageFooter>
     </div>
   );
 };

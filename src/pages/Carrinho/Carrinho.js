@@ -4,9 +4,11 @@ import "./Carrinho.css";
 
 
 const Carrinho = props => {
-    return(
-        <div></div>
-    );
+    return (
+        <div id="carrinho" className="container page">
+
+        </div>
+    )
 }
 
 export default Carrinho;

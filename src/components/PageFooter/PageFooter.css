@@ -1,16 +1,12 @@
 .footer-basic {
   margin: 0;
   padding: 40px 0px;
-  box-sizing: border-box;
   position:relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: black;
-  background: #fbcc15;
+  background: var(--color-secundary-dark);
 }
 
 .footer-basic ul {
