@@ -1,0 +1,30 @@
+#barra-de-filtragem{
+    background-color: #FBCC15;
+    width: 100vw;
+    height: 100px;
+    margin: 50px 50px;
+    display: flex;
+}
+
+#filtragem-form{
+    display: flex;
+}
+
+#number-input{
+    background-color: var(--color-box-footer);
+    border: 2px solid var(--color-secundary-dark);
+    width: 5rem;
+
+}
+
+#submit-button{
+    align-self: flex-start;
+    color: var(--color-button-text);
+}
+
+.form-item{
+    margin:0 10px 0 10px;
+    size: 100px 300px;
+    overflow: hidden;
+
+}

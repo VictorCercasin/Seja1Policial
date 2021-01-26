@@ -14,9 +14,11 @@
   align-items: center;
   height: 100px;
   background: #fbcc15;
+  z-index: 100;
 }
 
 .page-header .inicio {
+  height: 100px;
   display: flex;
   align-items: center;
   align-content: flex-start;

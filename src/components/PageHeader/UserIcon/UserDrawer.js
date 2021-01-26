@@ -6,7 +6,7 @@ import "./UserDrawer.css";
 
 const UserDrawer = props => {
     return (
-        <div id='user-drawer' onClick={props.closeDrawer} onMouseLeave={props.closeDrawer}>
+        <div id='user-drawer' onClick={props.closeDrawer} onMouseLeave={props.closeDrawer} >
             <DrawerLinks/>
         </div>
     )

@@ -9,9 +9,9 @@ import "./PageFooter.css";
 
 const PageFooter = (props) => {
   return ReactDOM.createPortal(
-    <div class="footer-basic">
+    <div className="footer-basic">
       <footer>
-        <div class="social">
+        <div className="social">
           <a href="#">
             <img src={Facebook} alt="facebook" />
           </a>
@@ -25,24 +25,24 @@ const PageFooter = (props) => {
             <img src={Youtube} alt="youtube" />
           </a>
         </div>
-        <ul class="list-inline">
-          <li class="list-inline-item">
+        <ul className="list-inline">
+          <li className="list-inline-item">
             <a href="#">Menu Inicial</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">Serviços</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">Sobre</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">Termos de uso</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">Politica de privacidade</a>
           </li>
         </ul>
-        <p class="copyright">Developed by Codifica Jr</p>
+        <p className="copyright">Developed by Codifica Jr</p>
       </footer>
     </div>,
     document.getElementById("footer-hook")
