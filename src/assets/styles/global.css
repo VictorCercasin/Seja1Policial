@@ -21,6 +21,7 @@
 
 .page{
     padding-top: 100px;
+    width:100%
 }
 
 * {
@@ -49,4 +50,11 @@ textarea {
     color: var(--color-text-base);
 }
 
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
 
+.center{
+    text-align: center;
+}

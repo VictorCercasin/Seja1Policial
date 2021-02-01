@@ -1,0 +1,21 @@
+#area-de-questoes{
+    background: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+    margin-top: 2.4rem;
+    overflow: hidden;
+    width: 60%;
+    display: flex;
+    flex-direction:column;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#questao-cabecalho {
+    display: flex;
+    padding: 1rem 0  1rem 0;
+    border-bottom: 1px solid var(--color-line-in-white);
+    justify-content: space-between;
+}
+

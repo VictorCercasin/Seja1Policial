@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Button from "./../../../components/UIElements/Button";
 import "./DropDownFilter.css";
 
-const DropDownFilter = (props) => {
+const DropDownFilter = props => {
   const [dropDown, setDropdown] = useState(false);
 
   const openFilterHandler = () => {
@@ -17,25 +17,27 @@ const DropDownFilter = (props) => {
     !dropDown && openFilterHandler();
   };
   return (
-      <div className={props.className}>
-          <Button onClick={buttonHandler} id="filter-button">
-            {props.children}
-          </Button>
-          {dropDown && <FilterBox filterSet={props.filterSet}></FilterBox>}
-      </div>
+    <div className={props.className}>
+      <Button onClick={buttonHandler} id="filter-button">
+        {props.children}
+        {dropDown && <FilterBox filterSet={props.filterSet}></FilterBox>}
+      </Button>
+      
+    </div>
   );
 };
 
 const FilterBox = (props) => {
-
   return (
-    <ul id='form-list'>
-      {props.filterSet.map((filterItem) => (
-        <li>
-          <Button >{filterItem}</Button>
-        </li>
-      ))}
-    </ul>
+    <div id="form-div">
+      <ul id="form-list">
+        {props.filterSet.map((filterItem) => (
+          <li>
+            <Button>{filterItem}</Button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

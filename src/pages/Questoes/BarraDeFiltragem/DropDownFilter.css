@@ -1,9 +1,24 @@
+#form-div {
+    border:  2px solid var(--color-secundary-dark);
+    background-color: rgb(0, 0, 0, 0.5);
+    position:absolute;
+}
+
+#form-list {
+    width: 20rem;
+    max-height: 10rem;
+    overflow-y:auto;
+}
+
 #form-list li {
     list-style: none;
 }
 
+#form-list li button {
+    color: white;
+}
 
-
-
-
+#submit-button {
+    color: white;
+}
 
