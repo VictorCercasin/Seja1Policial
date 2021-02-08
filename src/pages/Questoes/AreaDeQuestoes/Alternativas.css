@@ -1,5 +1,54 @@
-#alternativas{
+.lista-alternativas{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    
+}
+
+.lista-alternativas li{
+    padding: 20px;
+    text-align:start;
+    border: 2px solid black;
+    list-style: none;
+    
+}
+.lista-alternativas li label{
+    padding: 20px;
+    margin-left: 50px;
+    text-align:start;
+    
+}
+
+.lista-alternativas li input[type='radio']:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -10px;
+    left: -3px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+    transition: all 350ms ease;
+}
+
+.lista-alternativas li input[type='radio']:checked:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -10px;
+    left: -3px;
+    position: relative;
+    background-color: var(--color-secundary);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+    transition: all 350ms ease;
 }

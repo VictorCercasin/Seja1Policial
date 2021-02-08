@@ -10,8 +10,8 @@ import AreaDoAdministrador from "./pages/AreaDoAdministrador/AreaDoAdministrador
 import Carrinho from "./pages/Carrinho/Carrinho";
 import MinhaConta from "./pages/MinhaConta/MinhaConta";
 import MeusCursos from "./pages/MeusCursos/MeusCursos";
+import PageHeader from "./components/PageHeader/PageHeader";
 import PageFooter from "./components/PageFooter/PageFooter";
-import PageHeader from "./components/PageHeader/PageHeader"
 import "./assets/styles/global.css";
 import "./App.css";
 
@@ -30,7 +30,7 @@ function App() {
         <Route path="/carrinho"> <Carrinho /> </Route>
         <Route path="/minha-conta"> <MinhaConta /> </Route>
         <Route path="/meus-cursos"> <MeusCursos /> </Route>
-        <PageFooter/>
+        <PageFooter />
 
       </BrowserRouter>
     </React.Fragment>

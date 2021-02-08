@@ -1,7 +1,6 @@
 import React from "react";
 //import { Link } from 'react-router-dom';
 
-import PageFooter from "../../components/PageFooter/PageFooter";
 import CursoLista from "../../components/CursoItem/CursoLista";
 import "./CursoCompleto.css";
 

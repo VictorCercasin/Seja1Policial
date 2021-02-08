@@ -1,7 +1,5 @@
 import React from "react";
 
-import Input from "./../../../components/UIElements/Input";
-
 import DropDownFilter from "./DropDownFilter";
 import "./BarraDeFiltragem.css";
 
@@ -26,30 +24,29 @@ const DUMMY_FILTER_SET_ANO = [
   "2016",
   "2017",
 ];
-const DUMMY_FILTER_SET_DISCIPLINA = ["Matematica", "Filosofia", "Portugues"];
+const DUMMY_FILTER_SET_DISCIPLINA = [
+  "Matematica",
+  "Filosofia",
+  "Portugues",
+  "Direito",
+  "Sociologia"
+];
 
 const BarraDeFiltragem = (props) => {
   return (
     <div id="barra-de-filtragem">
-      <DropDownFilter filterSet={DUMMY_FILTER_SET_DISCIPLINA} className="form-item">
+      <DropDownFilter filterSet={DUMMY_FILTER_SET_DISCIPLINA} className="seletor">
         Selecionar Disciplina
       </DropDownFilter>
-      <DropDownFilter filterSet={DUMMY_FILTER_SET_ANO} className="form-item">
+      <DropDownFilter filterSet={DUMMY_FILTER_SET_ANO} className="seletor">
         Selecionar Ano
       </DropDownFilter>
-      <Input
-        id="number-input"
-        input
-        placeholder="#"
-        title="Buscar questao por numero"
-        className="form-item"
-      ></Input>
-      <input
+      <input className="input-buscar"
+        placeholder="Digite a palavra chave"
+      ></input>
+      <input className="submit-buscar"
         type="submit"
         value="Filtrar"
-        id="submit-button"
-        className="form-item"
-        title="Filtrar"
       ></input>
     </div>
   );

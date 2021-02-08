@@ -20,9 +20,10 @@ const DropDownFilter = props => {
     <div className={props.className}>
       <Button onClick={buttonHandler} id="filter-button">
         {props.children}
-        {dropDown && <FilterBox filterSet={props.filterSet}></FilterBox>}
       </Button>
-      
+      <div className="filterbox">
+        {dropDown && <FilterBox filterSet={props.filterSet}></FilterBox>}
+      </div>
     </div>
   );
 };

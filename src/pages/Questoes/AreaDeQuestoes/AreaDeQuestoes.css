@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
 #area-de-questoes{
     background: var(--color-box-base);
     border: 1px solid var(--color-line-in-white);
-    border-radius: 0.8rem;
-    margin-top: 2.4rem;
     overflow: hidden;
     width: 60%;
     display: flex;
@@ -14,8 +18,27 @@
 
 #questao-cabecalho {
     display: flex;
-    padding: 1rem 0  1rem 0;
+    flex-direction:column;
     border-bottom: 1px solid var(--color-line-in-white);
     justify-content: space-between;
 }
 
+#questao-cabecalho h3 {
+    text-align: start;
+    padding: 20px;  
+    border: 2px solid var(--color-line-in-white); 
+}
+
+#questao-cabecalho .cabeca-do-cabecalho{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    color: black;
+    background: var(--color-secundary);
+    border: 2px solid var(--color-line-in-white);    
+}
+
+#questao-cabecalho .cabeca-do-cabecalho h4{
+    font:bold;
+}

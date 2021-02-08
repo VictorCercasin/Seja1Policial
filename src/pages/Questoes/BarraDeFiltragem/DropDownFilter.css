@@ -1,24 +1,35 @@
+#filter-button{
+    display: flex;
+    justify-content: center;
+    color: black;
+    
+}
+
 #form-div {
-    border:  2px solid var(--color-secundary-dark);
-    background-color: rgb(0, 0, 0, 0.5);
+    margin-top: 22px;
+    margin-right: 50rem;
+    border-bottom:  2px solid var(--color-secundary-dark);
+    border-top:  2px solid var(--color-secundary-dark);
+    background-color: var(--color-box-base);
     position:absolute;
 }
 
+/*Caixa com a lista do drop down*/
 #form-list {
-    width: 20rem;
-    max-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 100px;
     overflow-y:auto;
+    list-style:none;
 }
 
-#form-list li {
-    list-style: none;
+#form-list::-webkit-scrollbar {
+    display: none;
 }
 
-#form-list li button {
-    color: white;
+#form-list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-
-#submit-button {
-    color: white;
-}
-
