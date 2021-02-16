@@ -35,7 +35,7 @@ const Alternativas = (props) => {
       )}
       {props.questao.e != "" && (
         <li>
-          <div>
+          <div className="alternativa">
             <input type="radio" id="altE" name="alternativa"></input>
             <label for="altE">{`e: ${props.questao.e}`}</label>
           </div>

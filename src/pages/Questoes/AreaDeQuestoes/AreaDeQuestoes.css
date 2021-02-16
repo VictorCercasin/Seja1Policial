@@ -6,7 +6,6 @@
 
 #area-de-questoes{
     background: var(--color-box-base);
-    border: 1px solid var(--color-line-in-white);
     overflow: hidden;
     width: 60%;
     display: flex;
@@ -19,14 +18,14 @@
 #questao-cabecalho {
     display: flex;
     flex-direction:column;
-    border-bottom: 1px solid var(--color-line-in-white);
+    
     justify-content: space-between;
 }
 
 #questao-cabecalho h3 {
     text-align: start;
     padding: 20px;  
-    border: 2px solid var(--color-line-in-white); 
+    
 }
 
 #questao-cabecalho .cabeca-do-cabecalho{
@@ -36,9 +35,27 @@
     height: 50px;
     color: black;
     background: var(--color-secundary);
-    border: 2px solid var(--color-line-in-white);    
+        
 }
 
 #questao-cabecalho .cabeca-do-cabecalho h4{
     font:bold;
+}
+
+input[type=submit]{
+    width: 20rem;
+    height: 5.6rem;
+    margin: 50px 50px;
+    background: var(--color-secundary) ;
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.4rem Consolas;
+    transition: 0.2s;
+}
+
+input[type=submit]:hover{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px  #FBCC15;
 }

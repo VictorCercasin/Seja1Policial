@@ -10,7 +10,7 @@
 #barra-de-filtragem .seletor{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     margin: 10px;
     padding: 10px 10px;
     height: 150x;
