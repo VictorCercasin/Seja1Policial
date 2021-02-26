@@ -1,43 +1,51 @@
-#barra-de-filtragem{
-    background-color: black;
-    height: 100px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#barra-de-filtragem {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 5rem;
+  margin: auto;
 }
 
-#barra-de-filtragem .seletor{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin: 10px;
-    padding: 10px 10px;
-    height: 150x;
-    width: 250px;
-    background: white;
+#id-input {
+  width: 100px;
+  color: var(--color-primary-light);
 }
 
-#barra-de-filtragem .input-buscar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
-    padding: 10px 10px;
-    height: 150x;
-    width: 250px;
-    background: white;
+#submit-button {
+  background-color: var(--color-secundary);
 }
 
-#barra-de-filtragem .submit-buscar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px 10px;
-    height: 150x;
-    width: 250px;
-    background: white;
-    color: black;
+#dropdown-filter {
+  z-index: 10;
+}
+
+#dropdown-li {
+  list-style: none;
+}
+
+#dropdown-ul {
+  max-height: 18rem;
+  overflow-y: scroll;
+  position: absolute;
+  z-index: 100;
+}
+
+.filter-member {
+  border: 1px solid black;
+  width: 200px;
+  height: 4rem;
+  color: black;
+  text-align: center;
+
+}
+
+.filter-member-smaller {
+  border: 1px solid black;
+  width: 183px;
+  height: 4rem;
+  color: black;
+  z-index: 100;
+  text-align: center;
 }

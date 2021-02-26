@@ -35,7 +35,7 @@ const AreaDeQuestoes = (props) => {
           <ol type="A">
             <Alternativas questao={props.questoes[numeroQuestao]}></Alternativas>
           </ol>
-          <input type='submit' onClick={onSubmit} value ='CONFIRMAR'></input>
+          <input type='submit' onClick={onSubmit} value ='CONFIRMAR' id='confirmar'></input>
 
         </form>
       </div>

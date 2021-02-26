@@ -14,16 +14,15 @@ const UserIcon = (props) => {
     changeDrawerIsOpen(true);
   };
   const buttonHandler = () => {
-    drawerIsOpen && closeDrawerHandler();
-    !drawerIsOpen && openDrawerHandler();
+    drawerIsOpen ? closeDrawerHandler() : openDrawerHandler();
   };
   return (
-    <React.Fragment>
+    <div id='user-icon'>
       <Button onClick={buttonHandler} id='user-button'>
         <img src={userIconImg} id="user-icon"></img>
       </Button>
-      {drawerIsOpen && <UserDrawer closeDrawer={closeDrawerHandler} />}
-    </React.Fragment>
+      {drawerIsOpen && <UserDrawer/>}
+    </div>
   );
 };
 export default UserIcon;

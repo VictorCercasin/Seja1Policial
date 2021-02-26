@@ -42,7 +42,7 @@
     font:bold;
 }
 
-input[type=submit]{
+#confirmar{
     width: 20rem;
     height: 5.6rem;
     margin: 50px 50px;
@@ -55,7 +55,7 @@ input[type=submit]{
     transition: 0.2s;
 }
 
-input[type=submit]:hover{
+#confirmar:hover{
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 15px  #FBCC15;
 }

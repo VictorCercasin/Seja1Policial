@@ -1,53 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 
-import DropDownFilter from "./DropDownFilter";
 import "./BarraDeFiltragem.css";
 
-const DUMMY_FILTER_SET_ANO = [
-  "1999",
-  "2000",
-  "2001",
-  "2002",
-  "2003",
-  "2004",
-  "2005",
-  "2006",
-  "2007",
-  "2008",
-  "2009",
-  "2010",
-  "2011",
-  "2012",
-  "2013",
-  "2014",
-  "2015",
-  "2016",
-  "2017",
-];
-const DUMMY_FILTER_SET_DISCIPLINA = [
-  "Matematica",
-  "Filosofia",
-  "Portugues",
-  "Direito",
-  "Sociologia"
-];
-
 const BarraDeFiltragem = (props) => {
+  let anos = [];
+  for (var i = 1990; i < 2021; i++) {
+    //deve receber os anos disponiveis no banco de dados
+    anos.push(i);
+  }
+  const filterItems = {
+    anos: anos,
+    disciplina: ["matematica", "portugues", "ingles"],
+  };
+
   return (
-    <div id="barra-de-filtragem">
-      <DropDownFilter filterSet={DUMMY_FILTER_SET_DISCIPLINA} className="seletor">
-        Selecionar Disciplina
-      </DropDownFilter>
-      <DropDownFilter filterSet={DUMMY_FILTER_SET_ANO} className="seletor">
-        Selecionar Ano
-      </DropDownFilter>
-      <input className="input-buscar"
-        placeholder="Digite a palavra chave"
+    <form id="barra-de-filtragem">
+      <DropDownFilter
+        filterItem={filterItems.anos}
+        label="anos"
+      />
+      <DropDownFilter
+        filterItem={filterItems.disciplina}
+        label="Disciplina"
+      />
+      
+      <input
+        type="text"
+        placeholder="#id"
+        className="filter-member"
+        id="id-input"
       ></input>
-      <input className="submit-buscar"
+      <input
         type="submit"
         value="Filtrar"
+        className="filter-member"
+        id="submit-button"
       ></input>
+    </form>
+  );
+};
+
+const DropDownFilter = (props) => {
+  const [drawerIsOpen, setDrawer] = useState(false);
+
+  const closeDrawer = () => {
+    setDrawer(false);
+  };
+  const openDrawer = () => {
+    setDrawer(true);
+  };
+
+  const drawerHandler = (e) => {
+    e.preventDefault();
+    drawerIsOpen ? closeDrawer() : openDrawer();
+  };
+  return (
+    <div id="dropdown-filter">
+      <button className="filter-member" onClick={drawerHandler}>
+        {props.label}
+      </button>
+      {drawerIsOpen && (
+        <div>
+          <ul id="dropdown-ul">
+            {props.filterItem.map((item) => (
+              <li id="dropdown-li">
+                <button className="filter-member-smaller">{item}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
