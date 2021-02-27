@@ -13,35 +13,40 @@ const BarraDeFiltragem = (props) => {
     disciplina: ["matematica", "portugues", "ingles"],
   };
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+  };
+
   return (
-    <form id="barra-de-filtragem">
-      <DropDownFilter
-        filterItem={filterItems.anos}
-        label="anos"
-      />
-      <DropDownFilter
-        filterItem={filterItems.disciplina}
-        label="Disciplina"
-      />
-      
-      <input
-        type="text"
-        placeholder="#id"
-        className="filter-member"
-        id="id-input"
-      ></input>
-      <input
-        type="submit"
-        value="Filtrar"
-        className="filter-member"
-        id="submit-button"
-      ></input>
-    </form>
+    <div id="container">
+      <form id="barra-de-filtragem" onSubmit={submitHandler}>
+        <DropDownFilter filterItem={filterItems.anos} label="anos" />
+        <DropDownFilter
+          filterItem={filterItems.disciplina}
+          label="Disciplina"
+        />
+
+        <input
+          type="text"
+          placeholder="#id"
+          className="filter-member"
+          id="id-input"
+        ></input>
+        <input
+          type="submit"
+          value="Filtrar"
+          className="filter-member"
+          id="submit-button"
+        ></input>
+      </form>
+    </div>
   );
 };
 
 const DropDownFilter = (props) => {
   const [drawerIsOpen, setDrawer] = useState(false);
+  const [txtBotao, setTxtBotao] = useState(props.label);
 
   const closeDrawer = () => {
     setDrawer(false);
@@ -54,17 +59,28 @@ const DropDownFilter = (props) => {
     e.preventDefault();
     drawerIsOpen ? closeDrawer() : openDrawer();
   };
+
+  const clickHandler = (e) => {
+    e.preventDefault();
+    setTxtBotao(e.target.innerHTML);
+    closeDrawer();
+  };
   return (
     <div id="dropdown-filter">
       <button className="filter-member" onClick={drawerHandler}>
-        {props.label}
+        {txtBotao}
       </button>
       {drawerIsOpen && (
         <div>
           <ul id="dropdown-ul">
             {props.filterItem.map((item) => (
               <li id="dropdown-li">
-                <button className="filter-member-smaller">{item}</button>
+                <button
+                  className="filter-member-smaller"
+                  onClick={clickHandler}
+                >
+                  {item}
+                </button>
               </li>
             ))}
           </ul>

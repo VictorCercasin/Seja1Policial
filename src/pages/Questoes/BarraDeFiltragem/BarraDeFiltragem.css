@@ -1,11 +1,9 @@
 #barra-de-filtragem {
-  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 60vw;
-  height: 5rem;
-  margin: auto;
+  margin: 50px auto 0;
 }
 
 #id-input {
@@ -14,7 +12,9 @@
 }
 
 #submit-button {
-  background-color: var(--color-secundary);
+  background-color: black;
+  border: 1px solid var(--color-secundary);
+  color: var(--color-secundary);
 }
 
 #dropdown-filter {
