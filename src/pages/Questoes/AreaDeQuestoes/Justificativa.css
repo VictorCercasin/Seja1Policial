@@ -1,0 +1,16 @@
+#certo{
+    background-color: green;
+}
+
+#errado{
+    background-color: red;
+}
+
+#anterior-próximo button{
+    color: black
+}
+
+.resposta{
+    padding: 3px 10px 3px 10px;
+    border: 1px solid black;
+}

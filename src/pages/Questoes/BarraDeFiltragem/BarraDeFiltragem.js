@@ -21,11 +21,8 @@ const BarraDeFiltragem = (props) => {
   return (
     <div id="container">
       <form id="barra-de-filtragem" onSubmit={submitHandler}>
-        <DropDownFilter filterItem={filterItems.anos} label="anos" />
-        <DropDownFilter
-          filterItem={filterItems.disciplina}
-          label="Disciplina"
-        />
+        <DropDownFilter filterItem={filterItems.anos} label="Anos" />
+        <DropDownFilter filterItem={filterItems.disciplina} label="Disciplina"/>
 
         <input
           type="text"
@@ -55,7 +52,7 @@ const DropDownFilter = (props) => {
     setDrawer(true);
   };
 
-  const drawerHandler = (e) => {
+  const drawerHandler = e => {
     e.preventDefault();
     drawerIsOpen ? closeDrawer() : openDrawer();
   };
@@ -65,18 +62,26 @@ const DropDownFilter = (props) => {
     setTxtBotao(e.target.innerHTML);
     closeDrawer();
   };
+
+
   return (
-    <div id="dropdown-filter">
+    <div id="dropdown-filter" onMouseLeave={closeDrawer}>
       <button className="filter-member" onClick={drawerHandler}>
-        {txtBotao}
+        <span>{txtBotao}</span>
+        <i className="fas fa-chevron-down" id="seta"/>
       </button>
       {drawerIsOpen && (
         <div>
-          <ul id="dropdown-ul">
+          <ul id="dropdown-ul" >
+            <li id="dropdown-li">
+              <button className="filter-member-smaller filter-member bold" onClick={clickHandler}>
+              {props.label}
+              </button>
+            </li>
             {props.filterItem.map((item) => (
-              <li id="dropdown-li">
+              <li id="dropdown-li" key={item.toString()}>
                 <button
-                  className="filter-member-smaller"
+                  className="filter-member-smaller filter-member"
                   onClick={clickHandler}
                 >
                   {item}

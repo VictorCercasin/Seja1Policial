@@ -6,12 +6,47 @@ import "./AreaDeQuestoes.css";
 
 const AreaDeQuestoes = (props) => {
   const [isQuestao, setIsQuestao] = useState(true);
-  const handleQuestaoSubmit = () =>{
-    setIsQuestao(false);
+  const [statusResposta, setStatusResposta] = useState(false);
+  const [numeroQuestao, setNumeroQuestao] = useState(0);
+
+  function proximaQuestao() {
+    if( props.questoes.length > numeroQuestao+1){
+      setNumeroQuestao(numeroQuestao+1)
+    }
+    else{ //fetch mais questoes do servidor
+
+    }
   }
+  function manejarQuestao(statusResposta) { //retorna true para correta false para errada
+    setStatusResposta(statusResposta);
+    setIsQuestao(false);
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; 
+  }
+
+  function manejarJustificativa(proxima){ //retorna true para proxima, false para anterior
+    proxima && (proximaQuestao());
+    setIsQuestao(true);
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
     <>
-      {isQuestao ? <Questao questoes={props.questoes}></Questao> : <Justificativa></Justificativa>}
+      {isQuestao ? (
+        <Questao
+          questoes={props.questoes}
+          manejarQuestao={manejarQuestao}
+          numeroQuestao={numeroQuestao}
+        />
+      ) : (
+        <Justificativa
+          statusResposta={statusResposta}
+          questoes={props.questoes}
+          numeroQuestao={numeroQuestao}
+          manejarJustificativa= {manejarJustificativa}
+        />
+      )}
     </>
   );
 };

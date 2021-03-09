@@ -18,7 +18,6 @@ import "./App.css";
 function App() {
   return (
     <React.Fragment>
-
       <BrowserRouter>
         <PageHeader />
         <Route path="/" exact> <Inicial /> </Route>
@@ -31,7 +30,6 @@ function App() {
         <Route path="/minha-conta"> <MinhaConta /> </Route>
         <Route path="/meus-cursos"> <MeusCursos /> </Route>
         <PageFooter />
-
       </BrowserRouter>
     </React.Fragment>
   );

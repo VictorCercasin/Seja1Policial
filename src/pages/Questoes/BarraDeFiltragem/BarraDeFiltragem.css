@@ -8,7 +8,8 @@
 
 #id-input {
   width: 100px;
-  color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  cursor: auto;
 }
 
 #submit-button {
@@ -17,7 +18,7 @@
   color: var(--color-secundary);
 }
 
-#dropdown-filter {
+#dropdown-filter { 
   z-index: 10;
 }
 
@@ -32,20 +33,39 @@
   z-index: 100;
 }
 
+#seta{
+  position: absolute;
+  margin: 4px 10px 0 0;
+}
+
 .filter-member {
-  border: 1px solid black;
+  position: relative;
   width: 200px;
+  max-width: 250px;
   height: 4rem;
   color: black;
   text-align: center;
+}
 
+.filter-member:hover {
+  cursor: pointer;
+}
+
+.filter-member:focus {
+  outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+
+i {
+  right: 0;
+  color: black;
 }
 
 .filter-member-smaller {
-  border: 1px solid black;
   width: 183px;
   height: 4rem;
-  color: black;
   z-index: 100;
   text-align: center;
 }
+
