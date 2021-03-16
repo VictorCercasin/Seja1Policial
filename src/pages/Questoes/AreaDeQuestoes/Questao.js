@@ -9,13 +9,19 @@ const Questao = (props) => {
 
   const onSubmit = e => {
     e.preventDefault();
-    (alternativaEscolhida===props.questoes[props.numeroQuestao].correta) ? (props.manejarQuestao(true)):(props.manejarQuestao(false))
+    (alternativaEscolhida===props.questoes[props.numeroQuestao].correta) ? (props.manejarQuestao({statusResposta:true, alternativaEscolhida:alternativaEscolhida})):(props.manejarQuestao({statusResposta:false, alternativaEscolhida:alternativaEscolhida}))
   }
   
   const onChange = (e) => {
-    console.log(e.target);
-    setAlternativaEscolhida(e.target.id);
     setsubmitAllower(1);
+    setAlternativaEscolhida(e.target.id);
+    document.getElementById('a').parentElement.classList.remove('selecionada');
+    document.getElementById('b').parentElement.classList.remove('selecionada');
+    document.getElementById('c') && document.getElementById('c').parentElement.classList.remove('selecionada');
+    document.getElementById('d') && document.getElementById('d').parentElement.classList.remove('selecionada');
+    document.getElementById('e') && document.getElementById('e').parentElement.classList.remove('selecionada');
+
+    e.currentTarget.classList.add("selecionada");
   };
 
   return (

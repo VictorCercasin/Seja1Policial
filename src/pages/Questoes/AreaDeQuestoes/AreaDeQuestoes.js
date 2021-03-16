@@ -7,6 +7,7 @@ import "./AreaDeQuestoes.css";
 const AreaDeQuestoes = (props) => {
   const [isQuestao, setIsQuestao] = useState(true);
   const [statusResposta, setStatusResposta] = useState(false);
+  const [alternativaEscolhida, setAlternativaEscolhida] = useState('');
   const [numeroQuestao, setNumeroQuestao] = useState(0);
 
   function proximaQuestao() {
@@ -17,9 +18,10 @@ const AreaDeQuestoes = (props) => {
 
     }
   }
-  function manejarQuestao(statusResposta) { //retorna true para correta false para errada
+  function manejarQuestao({statusResposta, alternativaEscolhida}) { //retorna true para correta false para errada
     setStatusResposta(statusResposta);
     setIsQuestao(false);
+    setAlternativaEscolhida(alternativaEscolhida);
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; 
   }
@@ -41,7 +43,7 @@ const AreaDeQuestoes = (props) => {
         />
       ) : (
         <Justificativa
-          statusResposta={statusResposta}
+          statusResposta={{statusResposta, alternativaEscolhida}}
           questoes={props.questoes}
           numeroQuestao={numeroQuestao}
           manejarJustificativa= {manejarJustificativa}

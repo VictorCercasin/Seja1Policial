@@ -18,6 +18,10 @@ const BarraDeFiltragem = (props) => {
     console.log(e.target);
   };
 
+  const getFilterState = state => {
+
+  }
+
   return (
     <div id="container">
       <form id="barra-de-filtragem" onSubmit={submitHandler}>
@@ -67,7 +71,7 @@ const DropDownFilter = (props) => {
   return (
     <div id="dropdown-filter" onMouseLeave={closeDrawer}>
       <button className="filter-member" onClick={drawerHandler}>
-        <span>{txtBotao}</span>
+        {txtBotao }
         <i className="fas fa-chevron-down" id="seta"/>
       </button>
       {drawerIsOpen && (
@@ -82,8 +86,7 @@ const DropDownFilter = (props) => {
               <li id="dropdown-li" key={item.toString()}>
                 <button
                   className="filter-member-smaller filter-member"
-                  onClick={clickHandler}
-                >
+                  onClick={clickHandler}>
                   {item}
                 </button>
               </li>
