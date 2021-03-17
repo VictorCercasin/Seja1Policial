@@ -88,7 +88,7 @@ const DUMMY_QUESTOES = [
 
 function Questoes() {
   return (
-    <div id="page-questoes" className="container page">'
+    <div id="page-questoes" className="container page">
       <BarraDeFiltragem></BarraDeFiltragem>
       <AreaDeQuestoes questoes={DUMMY_QUESTOES}></AreaDeQuestoes>
     </div>

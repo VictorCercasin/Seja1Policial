@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 import Alternativas from "./Alternativas";
 import "./Justificativa.css";
@@ -11,13 +11,19 @@ const Justificativa = (props) => {
     props.manejarJustificativa(true);
   };
   useEffect(() => {
-    if(props.statusResposta.statusResposta){document.getElementById(`${props.questoes[props.numeroQuestao].correta}`).parentElement.classList.add("correto");}
-    else{
-      document.getElementById(`${props.statusResposta.alternativaEscolhida}`).parentElement.classList.add("errado");
-      document.getElementById(`${props.questoes[props.numeroQuestao].correta}`).parentElement.classList.add("correto")
+    if (props.statusResposta.statusResposta) {
+      document
+        .getElementById(`${props.questoes[props.numeroQuestao].correta}`)
+        .parentElement.classList.add("correto");
+    } else {
+      document
+        .getElementById(`${props.statusResposta.alternativaEscolhida}`)
+        .parentElement.classList.add("errado");
+      document
+        .getElementById(`${props.questoes[props.numeroQuestao].correta}`)
+        .parentElement.classList.add("correto");
     }
-        
-  })
+  });
 
   const handleAnterior = (e) => {
     e.preventDefault();
@@ -49,7 +55,6 @@ const Justificativa = (props) => {
             questao={props.questoes[props.numeroQuestao]}
           />
         </ol>
-        
       </div>
       <div id="anterior-próximo">
         <button id="anterior" onClick={handleAnterior}>
@@ -58,7 +63,7 @@ const Justificativa = (props) => {
         </button>
         <button id="próximo" onClick={handleProximo}>
           {" "}
-          Proxima questao
+          Próxima questão
         </button>
       </div>
     </div>

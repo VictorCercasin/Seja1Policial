@@ -73,8 +73,8 @@
 }
 
 .correto{
-    background-color: green;
+    background:#50BE7F;
 }
 .errado{
-    background-color: red;
+    background:#C73E3E;
 }

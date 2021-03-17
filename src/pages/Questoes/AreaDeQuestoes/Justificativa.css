@@ -1,16 +1,30 @@
 #certo{
-    background-color: green;
+    background:#50BE7F;
 }
 
 #errado{
-    background-color: red;
+    background:#C73E3E;
 }
 
 #anterior-próximo button{
-    color: black
+    width: 20rem;
+    height: 5.6rem;
+    margin: 3.2rem;
+    background: var(--color-secundary) ;
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.4rem Consolas;
+    transition: 0.2s;
+    
+}
+
+#anterior-próximo :hover{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px  #FBCC15;
 }
 
 .resposta{
     padding: 3px 10px 3px 10px;
-    border: 1px solid black;
 }
