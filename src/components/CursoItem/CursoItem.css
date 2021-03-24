@@ -1,82 +1,110 @@
-.teacher-item {
-    background: var(--color-box-base);
-    border: 1px solid var(--color-line-in-white);
-    border-radius: 0.8rem;
-    margin-top: 2.4rem;
-    overflow: hidden;
-    width: 100%;
-
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-box-base);
+  border: 1px solid var(--color-line-in-white);
+  border-radius: 0.8rem;
+  margin-top: 5rem;
+  margin-right: 5rem;
+  max-width: 350px;
+  min-width: 350px;
+  max-height: 500px;
+  min-height: 500px;
+  list-style: none;
+  padding: 10px;
 }
 
-.teacher-item header{
-    padding: 3.2rem;
-    display: flex;
-    align-items: center;
+.card .headerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.teacher-item header img{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+.card .headerCard img {
+  width: 25rem;
+  height: 25rem;
 }
 
-.teacher-item header div{
-    margin-left: 2.4rem;
+.card .headerCard img:hover {
+  width: 27rem;
+  height: 27rem;
+  cursor: pointer;
 }
 
-.teacher-item header div strong{
-    font: 700 2.4rem Consolas;
-    display: block;
-    color: var(--color-text-title);
+.card .headerCard strong {
+  font: 700 2.4rem Consolas;
+  display: block;
+  margin-top: 2rem;
+  color: var(--color-text-title);
 }
 
-.teacher-item header div span{
-    font-size: 1.6rem;
-    display: block;
-    margin-top: 0.4ren;
+.card .headerCard span {
+  font-size: 1.6rem;
+  color: var(--color-secundary);
+  display: block;
+  margin-bottom: 0.4rem;
 }
 
-.teacher-item > p {
-    padding: 2rem 2rem;
-    font-size: 1.6rem;
-    line-height: 2.8rem;
+.card .footerCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-height: 140px;
 }
 
-.teacher-item footer{
-    padding: 3.2rem 2rem;
-    background: var(-color-box-footer);
-    border-top: 1px solid var(--color-line-in-white);
-    margin-top: 3.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.card .footerCard .precoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.teacher-item footer p strong{
-    color: var(--color-secundary);
-    font-size: 1.6rem;
-    display: block;
+.card .footerCard button {
+  width: 15rem;
+  height: 5.6rem;
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.4rem Consolas;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.2s;
 }
 
-.teacher-item footer button {
-    width: 20rem;
-    height: 5.6rem;
-    margin-right: 3.2rem;
-    background: var(--color-secundary) ;
-    color: var(--color-button-text);
-    border: 0;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font: 700 1.4rem Consolas;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: 0.2s;
-    
+.card .footerCard button:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px #fbcc15;
 }
 
-.teacher-item footer button:hover{
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px  #FBCC15;
+.card .footerCard {
+  display: flex;
+  margin-top: auto;
 }
 
+.card .footerCard .precoFooter {
+  display: flex;
+  padding: 2rem 5rem 2rem 3rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card .footerCard .precoFooter p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.card .footerCard .precoFooter p .dashed {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.6rem;
+  text-decoration-line: line-through;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.card .footerCard .precoFooter p strong {
+  color: var(--color-secundary);
+  font-size: 1.6rem;
+}
