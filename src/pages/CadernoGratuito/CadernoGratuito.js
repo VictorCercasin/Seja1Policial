@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./CadernoGratuito.css";
+import caderno from '../../assets/images/caderno-questoes-gratuitas.png'
 
 const  CadernoGratuito = () => {
     return (
@@ -29,6 +30,15 @@ const  CadernoGratuito = () => {
                         <p>QUESTÕES POLICIAIS</p>
                     </li>
                 </ul>
+            </div>
+            <div className="caderno">
+                <a><section className="questoes-gratuitas"><img src={caderno} alt="seja1gm" /></section></a>
+            </div>
+            <div id="botao">
+                <button id="baixar">
+                    {" "}
+                    BAIXAR AGORA
+                </button>
             </div>
         </div>
     ) 
