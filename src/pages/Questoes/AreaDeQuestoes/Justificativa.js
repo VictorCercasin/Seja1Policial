@@ -49,7 +49,7 @@ const Justificativa = (props) => {
         <h3>{props.questoes[props.numeroQuestao].enunciado}</h3>
       </div>
       <div id="questao-corpo">
-        <ol type="A">
+        <ol className="ol" type="A">
           <Alternativas
             justificativa
             questao={props.questoes[props.numeroQuestao]}

@@ -5,21 +5,38 @@ import "./Questao.css";
 
 const Questao = (props) => {
   const [submitAllower, setsubmitAllower] = useState(0);
-  const [alternativaEscolhida, setAlternativaEscolhida] = useState('');
+  const [alternativaEscolhida, setAlternativaEscolhida] = useState("");
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
-    (alternativaEscolhida===props.questoes[props.numeroQuestao].correta) ? (props.manejarQuestao({statusResposta:true, alternativaEscolhida:alternativaEscolhida})):(props.manejarQuestao({statusResposta:false, alternativaEscolhida:alternativaEscolhida}))
-  }
-  
+    alternativaEscolhida === props.questoes[props.numeroQuestao].correta
+      ? props.manejarQuestao({
+          statusResposta: true,
+          alternativaEscolhida: alternativaEscolhida,
+        })
+      : props.manejarQuestao({
+          statusResposta: false,
+          alternativaEscolhida: alternativaEscolhida,
+        });
+  };
+
   const onChange = (e) => {
     setsubmitAllower(1);
     setAlternativaEscolhida(e.target.id);
-    document.getElementById('a').parentElement.classList.remove('selecionada');
-    document.getElementById('b').parentElement.classList.remove('selecionada');
-    document.getElementById('c') && document.getElementById('c').parentElement.classList.remove('selecionada');
-    document.getElementById('d') && document.getElementById('d').parentElement.classList.remove('selecionada');
-    document.getElementById('e') && document.getElementById('e').parentElement.classList.remove('selecionada');
+    document.getElementById("a").parentElement.classList.remove("selecionada");
+    document.getElementById("b").parentElement.classList.remove("selecionada");
+    document.getElementById("c") &&
+      document
+        .getElementById("c")
+        .parentElement.classList.remove("selecionada");
+    document.getElementById("d") &&
+      document
+        .getElementById("d")
+        .parentElement.classList.remove("selecionada");
+    document.getElementById("e") &&
+      document
+        .getElementById("e")
+        .parentElement.classList.remove("selecionada");
 
     e.currentTarget.classList.add("selecionada");
   };
@@ -35,13 +52,19 @@ const Questao = (props) => {
       </div>
       <div id="questao-corpo">
         <form>
-          <ol type="A">
+          <ol className="ol" type="A">
             <Alternativas
               onChange={onChange}
               questao={props.questoes[props.numeroQuestao]}
             ></Alternativas>
           </ol>
-          <input disabled = {submitAllower !== 1} type="submit" onClick={onSubmit} value="CONFIRMAR" id="confirmar"></input>
+          <input
+            disabled={submitAllower !== 1}
+            type="submit"
+            onClick={onSubmit}
+            value="CONFIRMAR"
+            id="confirmar"
+          ></input>
         </form>
       </div>
     </div>

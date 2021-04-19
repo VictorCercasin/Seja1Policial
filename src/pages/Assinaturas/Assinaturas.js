@@ -1,11 +1,10 @@
 import React from "react";
-import PageHeader from "../../components/PageHeader/PageHeader";
 import "./Assinaturas.css";
 
 const Assinaturas = () => {
   const ItemList = [
     {
-      titulo: "Assinatura grátis",
+      titulo: "Assinatura Grátis",
       textoHabilitado: "Acesso a 5 questões por dia.",
       textoDesabilitado:
         "Desconto nos PDFs.\nLer diversos PDFs on-line.\nEstatisticas dos seus estudos.\nBaixar os PDFs.\n",
@@ -22,7 +21,7 @@ const Assinaturas = () => {
       preco: "R$ 20,00/mês",
     },
     {
-      titulo: "Assinatura Gold",
+      titulo: "Assinatura Premimum",
       textoHabilitado:
         "Acesso a 20 questões por dia.\nDesconto de 15% nos PDFs.\nLer diversos PDFs on-line.\n",
       textoDesabilitado: "Estatisticas dos seus estudos.\nBaixar os PDFs.\n",
@@ -30,7 +29,7 @@ const Assinaturas = () => {
       preco: "R$ 30,00/mês",
     },
     {
-      titulo: "Assinatura Platinum",
+      titulo: "Assinatura Expert",
       textoHabilitado:
         "Acesso a 50 questões por dia.\nDesconto de 25% nos PDFs.\nLer diversos PDFs on-line.\nEstatisticas dos seus estudos.",
       textoDesabilitado: "Baixar os PDFs.\n",
@@ -38,7 +37,7 @@ const Assinaturas = () => {
       preco: "R$ 50,00/mês",
     },
     {
-      titulo: "Assinatura Elite",
+      titulo: "Assinatura Atirador de Elite",
       textoHabilitado:
         "Acesso ilimitado a questões.\nDesconto de 50% nos PDFs.\nLer diversos PDFs on-line.\nEstatisticas dos seus estudos.\nBaixar os PDFs.\n",
       textoDesabilitado: "",

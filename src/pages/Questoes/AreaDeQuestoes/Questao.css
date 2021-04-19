@@ -1,62 +1,60 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
-*{
-    font-family: "Poppins", sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-
-
 #questao-cabecalho {
-    display: flex;
-    flex-direction:column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #questao-cabecalho h3 {
-    text-align: start;
-    padding: 20px;  
+  text-align: start;
+  padding: 20px;
 }
 
-
-
-#questao-cabecalho .cabeca-do-cabecalho h4{
-    font:bold;
+#questao-cabecalho .cabeca-do-cabecalho h4 {
+  font: bold;
 }
 
-#confirmar{
-    width: 20rem;
-    height: 5.6rem;
-    margin: 50px 50px;
-    background: var(--color-secundary) ;
-    color: var(--color-button-text);
-    border: 0;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font: 700 1.4rem Consolas;
-    transition: 0.2s;
+.ol {
+  padding-left: 0px;
 }
 
-
-#confirmar:disabled{
-    cursor: not-allowed;
+#confirmar {
+  width: 20rem;
+  height: 5.6rem;
+  margin: 50px 50px;
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.4rem Consolas;
+  transition: 0.2s;
 }
 
-.area-de-questoes{
-    background: var(--color-box-base);
-    width: 60%;
-    display: flex;
-    flex-direction:column;
-    margin:auto;
-    margin-top: 10px;
-    margin-bottom: 50px;
+#confirmar:disabled {
+  cursor: not-allowed;
 }
 
-.cabeca-do-cabecalho{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-    color: black;
-    background: var(--color-secundary);
-        
+.area-de-questoes {
+  background: var(--color-box-base);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.cabeca-do-cabecalho {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  color: black;
+  background: var(--color-secundary);
 }

@@ -1,6 +1,6 @@
 .bodyAssinatura {
   width: 100vw;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   margin-top: 60px;
   padding-top: 32px;
   padding-bottom: 32px;
-  background: black;
+  background: var(--color-primary);
 }
 
 .header {
@@ -16,14 +16,16 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 0 15%;
 }
 
 .h1Assinatura {
-  color: var(--color-secundary);
+  margin: 0px;
+  color: white;
+  text-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
   font-style: normal;
   font-weight: bold;
   text-align: center;
+  font-size: 72px;
 }
 
 .listaAssinatura {
@@ -45,26 +47,30 @@
   min-width: 265px;
   max-width: 265px;
   padding: 24px 16px 24px 24px;
-  margin: 8px 8px;
-  background: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 8px 24px;
+  background: var(--color-box-base);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
   border-radius: 5px;
 }
 
 .h4Assinatura {
-  color: var(--color-secundary);
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-shadow: -2px 4px 4px rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 32px;
 }
 
 .pAssinatura {
-  color: black;
+  color: white;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0em;
   text-align: left;
+  margin-top: 0px;
   margin-bottom: 0px;
   white-space: pre-line;
 }
@@ -83,19 +89,20 @@
 }
 
 .btnAssinatura {
-  margin-top: auto;
-  height: 3rem;
+  bottom: 0;
+  margin-bottom: 0px;
+  height: 6rem;
   background: var(--color-secundary);
   color: var(--color-button-text);
   border: 0;
-  border-radius: 0.8rem;
+  border-radius: 0.3rem;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .btnAssinaturan:hover {
   color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px #fbcc15;
+  box-shadow: 0 5px 15px #000000;
 }
 
 @media screen and (max-width: 1200px) {
