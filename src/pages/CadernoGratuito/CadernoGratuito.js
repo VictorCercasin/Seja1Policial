@@ -20,33 +20,33 @@ const CadernoGratuito = () => {
     },
   ];
   return (
-    <div id="caderno-gratuito" className="page">
-      <NavbarAuxiliar rotas={DUMMY_ROUTES}></NavbarAuxiliar>
-      <div className="titulo">
-        <h1>QUESTOES GRATUITAS</h1>
+    <div className="caderno-gratuito-grid-container">
+      <div className="header-caderno-gratuito">
+        <NavbarAuxiliar rotas={DUMMY_ROUTES}></NavbarAuxiliar>
       </div>
-      <div className="lista">
-        <ul>
-          <li>
-            <p>+ 100 QUESTÕES</p>
-          </li>
-          <li>
-            <p>MATERIAL ATUALIZADO</p>
-          </li>
-          <li>
-            <p>DOWNLOAD GRÁTIS</p>
-          </li>
-          <li>
-            <p>MATERIAL DIGITAL</p>
-          </li>
-          <li>
-            <p>QUESTÕES GABARITADAS</p>
-          </li>
-          <li>
-            <p>QUESTÕES POLICIAIS</p>
-          </li>
-        </ul>
+      <div className="titulo-caderno-gratuito">
+        <h1>QUESTÕES GRATUITAS</h1>
       </div>
+      <ul className="lista-caderno-gratuito">
+        <li>
+          <p>+ 100 QUESTÕES</p>
+        </li>
+        <li>
+          <p>MATERIAL ATUALIZADO</p>
+        </li>
+        <li>
+          <p>DOWNLOAD GRÁTIS</p>
+        </li>
+        <li>
+          <p>MATERIAL DIGITAL</p>
+        </li>
+        <li>
+          <p>QUESTÕES GABARITADAS</p>
+        </li>
+        <li>
+          <p>QUESTÕES POLICIAIS</p>
+        </li>
+      </ul>
       <div className="caderno">
         <a href="#">
           <section className="questoes-gratuitas">
@@ -54,8 +54,8 @@ const CadernoGratuito = () => {
           </section>
         </a>
       </div>
-      <div id="botao">
-        <button id="baixar"> BAIXAR AGORA</button>
+      <div className="botao">
+        <button className="baixar"> BAIXAR AGORA</button>
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 .ul-da-rota-auxiliar {
-  width: 100%;
-  position: absolute;
-  padding: 24px 24px;
+  width: 100vw;
+  position: fixed;
+  padding: 24px 0px;
   display: flex;
   align-items: flex-start;
   margin-top: 80px;
-  justify-content: space-around;
+  margin-bottom: 0px;
+  justify-content: space-evenly;
   background: var(--color-box-base);
   list-style: none;
   border-bottom: 1px black solid;

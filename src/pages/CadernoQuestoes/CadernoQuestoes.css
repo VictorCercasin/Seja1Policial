@@ -1,22 +1,7 @@
-#page-caderno-questoes {
-  padding-top: 100px;
-  width: 100vw;
-  height: 100vh;
-  justify-content: space-around;
-}
-
-#page-caderno-questoes body {
-  margin-top: 13.6rem;
-}
-
-#page-caderno-questoes main {
-  width: 90%;
-}
-
 .page-caderno-questoes {
   color: var(--color-text-in-primary);
   background: var(--color-primary);
   padding: 10rem 10rem;
-  margin-top: auto;
+  margin-top: 8rem;
   min-width: 80vw;
 }
