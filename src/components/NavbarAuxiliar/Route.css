@@ -1,33 +1,26 @@
-#certo {
-  background: #50be7f;
-}
-
-#errado {
-  background: #c73e3e;
-}
-
-#anterior-próximo button {
-  width: 20rem;
+.li-da-rota-auxiliar {
+  width: 15rem;
   height: 5.6rem;
-  margin: 3.2rem;
+  list-style: none;
+}
+
+.a-da-rota-auxiliar {
+  width: 25rem;
+  height: 5.6rem;
   background: var(--color-secundary);
   color: var(--color-button-text);
+  text-decoration: none;
   border: 0;
   border-radius: 0.8rem;
   cursor: pointer;
   font: 700 1.4rem Consolas;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   transition: 0.2s;
 }
 
-#anterior-próximo :hover {
+.a-da-rota-auxiliar:hover {
   color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px #000000;
-}
-
-.resposta {
-  padding: 3px 10px 3px 10px;
-}
-
-.ol {
-  padding-left: 0px;
 }

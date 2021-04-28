@@ -1,41 +1,29 @@
-import React from 'react';
+import React from "react";
 
-import './CursoItem.css';
+import "./CursoItem.css";
 
-
-
-const TeacherItem = (props) => {
-    return (
-        <div>
-            <article className="teacher-item">
-                <header>
-                    <img src={props.imgSrc} alt={props.imgAlt} />
-                    <div>
-                        <strong>
-                            {props.name}
-                        </strong>
-                        <span>
-                            {props.subject}
-                        </span>
-                    </div>
-                </header>
-
-                <p>
-                    {props.description}
-                </p>
-                <footer>
-                    <p>
-                        Preço do curso
-                            <strong> R$ {props.cost} </strong>
-                    </p>
-                    <button type="button">
-                        Comprar o curso
-                    </button>
-                </footer>
-
-            </article>
+const Card = (props) => {
+  return (
+    <div className="card">
+      <div className="headerCard">
+        <strong>{props.name}</strong>
+        <img src={props.imgSrc} alt={props.imgAlt} />
+        <p>{props.description}</p>
+        <span>{props.subject}</span>
+      </div>
+      <div className="footerCard">
+        <div className="precoFooter">
+          <p>
+            De: <h6 className="dashed"> R$ {props.costNormal} </h6>
+          </p>
+          <p>
+            Por:<strong> R$ {props.costPromo} </strong>
+          </p>
         </div>
-    );
-}
+        <button type="button">Comprar o curso</button>
+      </div>
+    </div>
+  );
+};
 
-export default TeacherItem;
+export default Card;

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 //import { Link } from 'react-router-dom';
 
 import CursoLista from "../../components/CursoItem/CursoLista";
-import "./CursoCompleto.css";
+import NavbarAuxiliar from "../../components/NavbarAuxiliar/NavbarAuxiliar";
+import "./CadernoQuestoes.css";
 import C1 from "../../assets/images/c1.png";
 import C2 from "../../assets/images/c2.png";
 import C3 from "../../assets/images/c3.png";
@@ -19,6 +20,21 @@ import C13 from "../../assets/images/c13.png";
 import C14 from "../../assets/images/c14.png";
 import C15 from "../../assets/images/c15.png";
 import C16 from "../../assets/images/c16.png";
+
+const DUMMY_ROUTES = [
+  {
+    href: "/apostilas",
+    texto: "Apostilas",
+  },
+  {
+    href: "/caderno-questoes",
+    texto: "Caderno de questões",
+  },
+  {
+    href: "/caderno-gratuito",
+    texto: "Caderno gratuito",
+  },
+];
 
 const DUMMY_COURSES = [
   {
@@ -167,12 +183,15 @@ const DUMMY_COURSES = [
   },
 ];
 
-const CursoCompleto = () => {
+const CadernoQuestoes = () => {
   return (
-    <div className="page-curso">
-      <CursoLista cursoLista={DUMMY_COURSES}></CursoLista>
-    </div>
+    <Fragment>
+      <NavbarAuxiliar rotas={DUMMY_ROUTES}></NavbarAuxiliar>
+      <div className="page-caderno-questoes">
+        <CursoLista cursoLista={DUMMY_COURSES}></CursoLista>
+      </div>
+    </Fragment>
   );
 };
 
-export default CursoCompleto;
+export default CadernoQuestoes;

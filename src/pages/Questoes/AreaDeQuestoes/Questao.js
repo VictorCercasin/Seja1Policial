@@ -4,35 +4,62 @@ import Alternativas from "./Alternativas";
 import "./Questao.css";
 
 const Questao = (props) => {
-    const [numeroQuestao, next] = useState(0);
+  const [submitAllower, setsubmitAllower] = useState(0);
+  const [alternativaEscolhida, setAlternativaEscolhida] = useState("");
 
-    const onSubmit =  e  => {
-      e.preventDefault();
-      if(props.questoes.length > (numeroQuestao + 1)){
-        next(numeroQuestao + 1);
-      }
-      else{
-        next(0);
-      }
-      
-    }
+  const onSubmit = (e) => {
+    e.preventDefault();
+    alternativaEscolhida === props.questoes[props.numeroQuestao].correta
+      ? props.manejarQuestao({
+          statusResposta: true,
+          alternativaEscolhida: alternativaEscolhida,
+        })
+      : props.manejarQuestao({
+          statusResposta: false,
+          alternativaEscolhida: alternativaEscolhida,
+        });
+  };
+
+  const onChange = (e) => {
+    setsubmitAllower(1);
+    setAlternativaEscolhida(e.target.id);
+    document.getElementById("a").parentElement.classList.remove("selecionada");
+    document.getElementById("b").parentElement.classList.remove("selecionada");
+    document.getElementById("c") &&
+      document
+        .getElementById("c")
+        .parentElement.classList.remove("selecionada");
+    document.getElementById("d") &&
+      document
+        .getElementById("d")
+        .parentElement.classList.remove("selecionada");
+    document.getElementById("e") &&
+      document
+        .getElementById("e")
+        .parentElement.classList.remove("selecionada");
+
+    e.currentTarget.classList.add("selecionada");
+  };
+
   return (
-    <div id="area-de-questoes" className="flex-center center">
+    <div className="flex-center center area-de-questoes">
       <div id="questao-cabecalho">
         <div className="cabeca-do-cabecalho">
-          <h4>ID : {props.questoes[numeroQuestao].id}</h4>
-          <h4>Disciplina : {props.questoes[numeroQuestao].disciplina}</h4>
+          <h4>id : {props.questoes[props.numeroQuestao].id}</h4>
+          <h4>Disciplina : {props.questoes[props.numeroQuestao].disciplina}</h4>
         </div>
-        <h3>{props.questoes[numeroQuestao].enunciado}</h3>
+        <h3>{props.questoes[props.numeroQuestao].enunciado}</h3>
       </div>
       <div id="questao-corpo">
         <form>
-          <ol type="A">
+          <ol className="ol" type="A">
             <Alternativas
-              questao={props.questoes[numeroQuestao]}
+              onChange={onChange}
+              questao={props.questoes[props.numeroQuestao]}
             ></Alternativas>
           </ol>
           <input
+            disabled={submitAllower !== 1}
             type="submit"
             onClick={onSubmit}
             value="CONFIRMAR"

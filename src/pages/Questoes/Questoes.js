@@ -32,6 +32,24 @@ const DUMMY_QUESTOES = [
   },
   {
     id: "",
+    banca: "INSTITUTO AOCP",
+    ano: "2020",
+    disciplina: "Direito Administrativo",
+    orgao: "Prefeitura de Novo Hamburgo - RS",
+    enunciado:
+      "Dispõe o artigo art. 5º, inciso XIII, da Constituição Federal de 1988, que “é livre o exercício de qualquer trabalho, ofício ou profissão, atendidas as qualificações profissionais que a lei estabelecer”. Quanto à aplicabilidade das normas constitucionais, o excerto apresentado é exemplo de norma constitucional de eficácia",
+    prova:
+      "INSTITUTO AOCP - 2020 - Prefeitura de Novo Hamburgo - RS - Auditor Fiscal de Tributos",
+    comentario: "",
+    a: "Plena",
+    b: "Limitada",
+    c: "",
+    d: "",
+    e: "",
+    correta: "b",
+  },
+  {
+    id: "",
     banca: "GUALIMP",
     ano: "2020",
     disciplina: "Direito Administrativo",

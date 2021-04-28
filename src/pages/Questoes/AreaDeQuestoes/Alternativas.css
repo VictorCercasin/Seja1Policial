@@ -15,7 +15,7 @@
 }
 .lista-alternativas li label{
     padding: 20px;
-    margin-left: 50px;
+    margin-left: 3rem;
     text-align:start;
     
 }
@@ -54,8 +54,27 @@
     transition: all 350ms ease;
 }
 .alternativa{
+
     height: 100%;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     padding-left: 7rem;
+}
+
+.letra{
+    margin-left: 5rem;
+    font-size:xx-large;
+    color:var(--color-secundary);
+}
+
+.selecionada{
+    background-color: var(--color-primary-dark);
+}
+
+.correto{
+    background:#50BE7F;
+}
+.errado{
+    background:#C73E3E;
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import PageHeader from "../../components/PageHeader/PageHeader";
 import "./Assinaturas.css";
 
 const Assinaturas = () => {
   const ItemList = [
     {
-      titulo: "Assinatura grátis",
+      titulo: "Assinatura Grátis",
       textoHabilitado: "Acesso a 5 questões por dia.",
       textoDesabilitado:
         "Desconto nos PDFs.\nLer diversos PDFs on-line.\nEstatisticas dos seus estudos.\nBaixar os PDFs.\n",
@@ -22,7 +21,7 @@ const Assinaturas = () => {
       preco: "R$ 20,00/mês",
     },
     {
-      titulo: "Assinatura Gold",
+      titulo: "Assinatura Premimum",
       textoHabilitado:
         "Acesso a 20 questões por dia.\nDesconto de 15% nos PDFs.\nLer diversos PDFs on-line.\n",
       textoDesabilitado: "Estatisticas dos seus estudos.\nBaixar os PDFs.\n",
@@ -30,7 +29,7 @@ const Assinaturas = () => {
       preco: "R$ 30,00/mês",
     },
     {
-      titulo: "Assinatura Platinum",
+      titulo: "Assinatura Expert",
       textoHabilitado:
         "Acesso a 50 questões por dia.\nDesconto de 25% nos PDFs.\nLer diversos PDFs on-line.\nEstatisticas dos seus estudos.",
       textoDesabilitado: "Baixar os PDFs.\n",
@@ -38,7 +37,7 @@ const Assinaturas = () => {
       preco: "R$ 50,00/mês",
     },
     {
-      titulo: "Assinatura Elite",
+      titulo: "Assinatura Atirador de Elite",
       textoHabilitado:
         "Acesso ilimitado a questões.\nDesconto de 50% nos PDFs.\nLer diversos PDFs on-line.\nEstatisticas dos seus estudos.\nBaixar os PDFs.\n",
       textoDesabilitado: "",
@@ -48,17 +47,19 @@ const Assinaturas = () => {
   ];
 
   return (
-    <section className="body">
+    <section className="bodyAssinatura">
       <div className="header">
-        <h1>Assinaturas</h1>
+        <h1 className="h1Assinatura">Assinaturas</h1>
       </div>
-      <ul className="lista">
+      <ul className="listaAssinatura">
         {ItemList.map((item, index) => (
-          <li className="item" key={index.toString()}>
-            <h4>{item.titulo}</h4>
-            <p>{item.textoHabilitado}</p>
-            <span>{item.textoDesabilitado}</span>
-            <button href={item.link}>{item.preco}</button>
+          <li className="itemAssinatura" key={index.toString()}>
+            <h4 className="h4Assinatura">{item.titulo}</h4>
+            <p className="pAssinatura">{item.textoHabilitado}</p>
+            <span className="spanAssinatura">{item.textoDesabilitado}</span>
+            <button className="btnAssinatura" href={item.link}>
+              {item.preco}
+            </button>
           </li>
         ))}
       </ul>

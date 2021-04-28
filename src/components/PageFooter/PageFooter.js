@@ -7,7 +7,7 @@ import Instagram from "../../assets/images/instagram-icon.png";
 import Youtube from "../../assets/images/youtube-icon.png";
 import "./PageFooter.css";
 
-const PageFooter = (props) => {
+const PageFooter = () => {
   return ReactDOM.createPortal(
     <div className="footer-basic">
       <footer>
@@ -25,24 +25,10 @@ const PageFooter = (props) => {
             <img src={Youtube} alt="youtube" />
           </a>
         </div>
-        <ul className="list-inline">
-          <li className="list-inline-item">
-            <a href="#">Menu Inicial</a>
-          </li>
-          <li className="list-inline-item">
-            <a href="#">Serviços</a>
-          </li>
-          <li className="list-inline-item">
-            <a href="#">Sobre</a>
-          </li>
-          <li className="list-inline-item">
-            <a href="#">Termos de uso</a>
-          </li>
-          <li className="list-inline-item">
-            <a href="#">Politica de privacidade</a>
-          </li>
-        </ul>
-        <p className="copyright">Developed by Codifica Jr</p>
+
+        <p className="copyright">
+          Seja1Policial © 2021 Todos os direitos reservados
+        </p>
       </footer>
     </div>,
     document.getElementById("footer-hook")

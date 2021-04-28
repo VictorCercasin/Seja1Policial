@@ -1,0 +1,57 @@
+.caderno-gratuito-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10vh 10vh 60vh 10vh;
+  grid-template-areas:
+    "h h h"
+    "t t t"
+    ". l i"
+    ". . b";
+}
+
+.header-caderno-gratuito {
+  grid-area: h;
+}
+
+.titulo-caderno-gratuito {
+  margin-top: 55px;
+  grid-area: t;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.lista-caderno-gratuito {
+  margin: 70px 0px 0px -150px;
+  grid-area: l;
+  text-align: left;
+  font-size: 3.5rem;
+}
+
+.caderno {
+  margin-top: 50px;
+  margin-left: -200px;
+  grid-area: i;
+}
+
+.caderno img {
+  height: 50rem;
+  width: 50rem;
+}
+
+.botao {
+  grid-area: b;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+
+.botao .baixar {
+  width: 20rem;
+  height: 5.6rem;
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.4rem Consolas;
+}

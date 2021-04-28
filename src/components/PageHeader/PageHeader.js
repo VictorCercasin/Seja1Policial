@@ -15,8 +15,8 @@ const PageHeader = (props) => {
       </Link>
       <ul>
         <li>
-          <Link to="/cursos-completos" className="cursos-completos">
-            Cursos
+          <Link to="/caderno-questoes" className="cursos-completos">
+            Apostilas
           </Link>
         </li>
         <li>
@@ -35,10 +35,10 @@ const PageHeader = (props) => {
           </Link>
         </li>
       </ul>
-    <UserIcon/>
+      <UserIcon />
     </div>,
     document.getElementById("header-hook")
   );
 };
 
-export default PageHeader; 
+export default PageHeader;
