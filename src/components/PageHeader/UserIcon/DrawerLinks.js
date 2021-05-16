@@ -1,7 +1,7 @@
 import React from "react";
 
 import Carrinho from "./../../../pages/Carrinho/Carrinho";
-import AreaDoAdministrador from "./../../../pages/AreaDoAdministrador/AreaDoAdministrador";
+import AreaDoAdministrador from "../../../pages/AreaDoAdministrador/AreaDoAdministrador";
 import MeusCursos from "./../../../pages/MeusCursos/MeusCursos";
 import MinhaConta from "./../../../pages/MinhaConta/MinhaConta";
 import Button from "./../../UIElements/Button";

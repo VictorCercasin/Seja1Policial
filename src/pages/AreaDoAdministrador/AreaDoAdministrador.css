@@ -1,4 +1,70 @@
-#meubotaozin{
-    height: 10px;
-    width: 100px;
+#area-administrador{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+}
+
+
+#containerUsefulArea{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-box-base);
+    border: 1px solid black;
+    width: 80%;
+    height: 100%;
+}
+
+#adm-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    background-color: var(--color-secundary);
+    border-bottom: 1px solid black;
+}
+
+#adm-header h2{
+    color: var(--color-primary-darker);
+    margin-left: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#adm-inner-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#adm-nav-bar{
+    width: 30%;
+    height: 100%;
+}
+
+#containerMainContent{
+    height: 100%;
+    width: 70%;
+}
+
+#adm-nav-bar ul{
+    list-style: none;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#adm-nav-bar ul li{
+    margin-top: 5rem;
+}
+
+#adm-nav-bar-button{
+    border: none;
+    background-color: transparent;
+    color: var(--color-secundary);
+    font-size: x-large;
+}
+#adm-nav-bar-button:hover{
+    cursor: pointer;
 }
