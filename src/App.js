@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import Inicial from "./pages/Inicial/Inicial";
+import Login from "./pages/Login/Login";
 import MaisInformacoes from "./pages/MaisInformacoes/MaisInformacoes";
 import CadernoQuestoes from "./pages/CadernoQuestoes/CadernoQuestoes";
 import Questoes from "./pages/Questoes/Questoes";
@@ -15,55 +16,76 @@ import PageFooter from "./components/PageFooter/PageFooter";
 import CadernoGratuito from "./pages/CadernoGratuito/CadernoGratuito";
 import "./assets/styles/global.css";
 import "./App.css";
+import { AuthContext } from "./components/context/auth-context";
 
 function App() {
+  const [loginStatus, setLoginStatus] = useState('deslogado');
+
+  const login = useCallback((op) => {
+    (op == 'logado') && setLoginStatus('logado');
+    (op == 'admin') && setLoginStatus('admin');
+}, [])
+
+  const logout = useCallback(() => {
+    setLoginStatus('deslogado');
+  }, []);
+
   return (
-    <React.Fragment>
+    <AuthContext.Provider
+      value={{
+        loginStatus:loginStatus,
+        login: login,
+        logout: logout,
+      }}
+    >
       <BrowserRouter>
         <PageHeader />
         <Route path="/" exact>
-          {" "}
-          <Inicial />{" "}
+          <Inicial />
+        </Route>
+        <Route path="/login" exact>
+          
+          <Login />
         </Route>
         <Route path="/mais-info">
-          {" "}
+          
           <MaisInformacoes />
         </Route>
         <Route path="/caderno-questoes">
-          {" "}
-          <CadernoQuestoes />{" "}
+          
+          <CadernoQuestoes />
         </Route>
         <Route path="/assinaturas">
-          {" "}
-          <Assinaturas />{" "}
+          
+          <Assinaturas />
         </Route>
         <Route path="/questoes">
-          {" "}
-          <Questoes />{" "}
+          
+          <Questoes />
         </Route>
         <Route path="/area-do-administrador">
-          {" "}
-          <AreaDoAdministrador />{" "}
+          
+          <AreaDoAdministrador />
         </Route>
         <Route path="/carrinho">
-          {" "}
-          <Carrinho />{" "}
+          
+          <Carrinho />
         </Route>
         <Route path="/minha-conta">
-          {" "}
-          <MinhaConta />{" "}
+          
+          <MinhaConta />
         </Route>
         <Route path="/meus-cursos">
-          {" "}
-          <MeusCursos />{" "}
+          
+          <MeusCursos />
         </Route>
         <Route path="/caderno-gratuito">
-          {" "}
-          <CadernoGratuito />{" "}
+          
+          <CadernoGratuito />
         </Route>
         <PageFooter />
       </BrowserRouter>
-    </React.Fragment>
+    </AuthContext.Provider>
   );
 }
 

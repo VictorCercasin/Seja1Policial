@@ -11,6 +11,7 @@ const DrawerLinks = (props) => {
   return (
     <div className="drawer-links">
       <ul>
+      <li><Button to='/login'id='button'>Login</Button></li>
         <li><Button to='/meus-cursos' id='button'>Meus Cursos</Button></li>
         <li><Button to='/minha-conta'id='button'>Minha conta</Button></li>
         <li><Button to='/carrinho'id='button'>Carrinho</Button></li>

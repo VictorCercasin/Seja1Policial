@@ -1,0 +1,19 @@
+#container-login{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonLogin{
+    color: var(--color-secundary);
+    background-color: black;
+    border: 1px solid var( --color-secundary);
+    margin-left: 10px;
+    padding: 5px 70px;
+}
+
+#buttonLogin:hover{
+    cursor: pointer;
+}
