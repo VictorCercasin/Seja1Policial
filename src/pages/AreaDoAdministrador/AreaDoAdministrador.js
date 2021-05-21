@@ -13,7 +13,7 @@ const AreaDoAdministrador = (props) => {
   ];
   return (
     <div id="area-administrador" className="container page">
-      <div id="containerUsefulArea">
+      <div id="adm-container-usefulArea" className="container-useful-area">
         <header id="adm-header"><h2>Área do administrador</h2></header>
         <div id="adm-inner-container">
           <div id="adm-nav-bar">

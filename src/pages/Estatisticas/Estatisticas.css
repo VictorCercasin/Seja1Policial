@@ -1,0 +1,74 @@
+#page-estatisticas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#estatisticas-useful-area {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-box-base);
+  border: 1px solid black;
+  width: 80%;
+  height: 100%;
+}
+
+#estatisticas-radio-container {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+#estatisticas-chart-container {
+  width: 70%;
+  background-color: black;
+  
+}
+
+#estatisticas-radio-container form ul{
+    list-style: none;
+    margin: 50px 0;
+}
+
+#estatisticas-radio-container form ul li{
+    margin-top: 20px;
+}
+
+#estatisticas-radio-container form ul li label{
+    margin-left: 20px;
+    font-size: x-large;
+    color: var(--color-secundary)
+}
+
+#estatisticas-radio-container form ul li input[type='radio']:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -10px;
+    left: -3px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    cursor: pointer;
+    text-align: center;
+    transition: all 350ms ease;
+}
+
+#estatisticas-radio-container form ul li input[type='radio']:checked:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -10px;
+    left: -3px;
+    position: relative;
+    background-color: var(--color-secundary);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    cursor: pointer;
+    text-align: center;
+    transition: all 350ms ease;
+}

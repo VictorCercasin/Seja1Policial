@@ -5,3 +5,17 @@
     border-radius: 50%;
 }
 
+#user-text{
+    color: var(--color-button-text);
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: small;
+    text-decoration: underline;
+
+}
+
+.userIcon{
+    margin-left: 10px;
+    color: black;
+    
+}

@@ -14,26 +14,27 @@ import MeusCursos from "./pages/MeusCursos/MeusCursos";
 import PageHeader from "./components/PageHeader/PageHeader";
 import PageFooter from "./components/PageFooter/PageFooter";
 import CadernoGratuito from "./pages/CadernoGratuito/CadernoGratuito";
+import Estatisticas from "./pages/Estatisticas/Estatisticas";
 import "./assets/styles/global.css";
 import "./App.css";
 import { AuthContext } from "./components/context/auth-context";
 
 function App() {
-  const [loginStatus, setLoginStatus] = useState('deslogado');
+  const [loginStatus, setLoginStatus] = useState("deslogado");
 
   const login = useCallback((op) => {
-    (op == 'logado') && setLoginStatus('logado');
-    (op == 'admin') && setLoginStatus('admin');
-}, [])
+    op == "logado" && setLoginStatus("logado");
+    op == "admin" && setLoginStatus("admin");
+  }, []);
 
   const logout = useCallback(() => {
-    setLoginStatus('deslogado');
+    setLoginStatus("deslogado");
   }, []);
 
   return (
     <AuthContext.Provider
       value={{
-        loginStatus:loginStatus,
+        loginStatus: loginStatus,
         login: login,
         logout: logout,
       }}
@@ -44,43 +45,36 @@ function App() {
           <Inicial />
         </Route>
         <Route path="/login" exact>
-          
           <Login />
         </Route>
+        <Route path="/estatisticas" exact>
+          <Estatisticas />
+        </Route>
         <Route path="/mais-info">
-          
           <MaisInformacoes />
         </Route>
         <Route path="/caderno-questoes">
-          
           <CadernoQuestoes />
         </Route>
         <Route path="/assinaturas">
-          
           <Assinaturas />
         </Route>
         <Route path="/questoes">
-          
           <Questoes />
         </Route>
         <Route path="/area-do-administrador">
-          
           <AreaDoAdministrador />
         </Route>
         <Route path="/carrinho">
-          
           <Carrinho />
         </Route>
         <Route path="/minha-conta">
-          
           <MinhaConta />
         </Route>
         <Route path="/meus-cursos">
-          
           <MeusCursos />
         </Route>
         <Route path="/caderno-gratuito">
-          
           <CadernoGratuito />
         </Route>
         <PageFooter />
